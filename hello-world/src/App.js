@@ -1,9 +1,21 @@
+
 import React, { Component } from 'react';
-import Bootstra, {} from 'bootstrap'
 import logo from './logo.svg';
 import './App.css';
 
+import 'semantic-ui-css/semantic.min.css';
+import { Button } from 'semantic-ui-react';
+
+//TODO bootstrap
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// import {Button} from 'react-bootstrap';
+
 class App extends Component {
+
+  onClickListener() {
+    alert("here")
+  }
+
   render() {
     return (
       <div className="App">
@@ -12,8 +24,11 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.!
-        </p>
+          To get started, editing <code>src/App.js</code> and save to reload.!
+        </p> 
+
+        <Button onClick={this.onClickListener}>Default</Button>
+
       </div>
     );
   }
