@@ -5,7 +5,12 @@ module.exports = {
 	entry: './main.js',
 	output: {path: __dirname, filename: 'bundle.js'},
 	module: {
-		loaders: [			
+		loaders: [
+			{
+				test: /\.jsx$/,
+				loader: 'eslint-loader',
+				exclude: /node_modules/
+			},
 			{
 				test: /\.jsx?$/,
 				loader: 'babel-loader',
