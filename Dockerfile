@@ -12,8 +12,8 @@ RUN apt install -y 	nodejs \
 					build-essential
 
 #
-RUN npm install -g create-react-app
-RUN create-react-app hello-world
+# RUN npm install -g create-react-app
+# RUN create-react-app hello-world
 
 #Finish
-WORKDIR /home/dev
+WORKDIR /home
