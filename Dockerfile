@@ -17,3 +17,5 @@ RUN apt install -y 	nodejs \
 
 #Finish
 WORKDIR /home
+EXPOSE 8080
+EXPOSE 3000
