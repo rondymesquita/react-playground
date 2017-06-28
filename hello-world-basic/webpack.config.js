@@ -6,19 +6,28 @@ module.exports = {
 	output: {path: __dirname, filename: 'bundle.js'},
 	module: {
 		loaders: [
-		{
-			test: /\.jsx$/,
-			loader: 'eslint-loader',
-			exclude: /node_modules/
-		},
-		{
-			test: /\.jsx?$/,
-			loader: 'babel-loader',
-			exclude: /node_modules/,
-			query:{
-				presets: ['es2015', 'react']
+			{
+				test: /\.jsx$/,
+				loader: 'eslint-loader',
+				exclude: /node_modules/
+			},
+			{
+				test: /\.jsx?$/,
+				loader: 'babel-loader',
+				exclude: /node_modules/,
+				query:{
+					presets: ['es2015', 'react']
+				}
+			},
+			{ 
+				test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+				loader: 'url-loader?limit=100000'
+			},
+			{ 
+				test: /\.css$/,
+				loader: "style-loader!css-loader" 
 			}
-		}
+
 		]
 	},
 	devServer: {

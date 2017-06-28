@@ -1,1 +1,1 @@
-import Hello from './index.jsx';
+import Index from './index.jsx';
