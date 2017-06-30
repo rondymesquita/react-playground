@@ -7,7 +7,8 @@ module.exports = {
 	module: {
 		loaders: [
 			{
-				test: /\.jsx$/,
+				"enforce": "pre",
+				test: /\.jsx?$/,
 				loader: 'eslint-loader',
 				exclude: /node_modules/
 			},
@@ -19,13 +20,13 @@ module.exports = {
 					presets: ['es2015', 'react']
 				}
 			},
-			{ 
+			{
 				test: /\.(png|woff|woff2|eot|ttf|svg)$/,
 				loader: 'url-loader?limit=100000'
 			},
-			{ 
+			{
 				test: /\.css$/,
-				loader: "style-loader!css-loader" 
+				loader: "style-loader!css-loader"
 			}
 
 		]
